@@ -1,0 +1,336 @@
+body {
+    font-family: Arial, sans-serif; 
+}
+
+/* CSS untuk styling navbar */
+.navbar {
+    background-color: #f8f9fa; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold; 
+    font-size: 1.5rem; 
+}
+
+.navbar-brand img {
+    margin-right: 8px; 
+}
+
+.nav-link {
+    font-size: 1.25rem; 
+    transition: color 0.3s ease; 
+    color: #000; 
+}
+
+/* Warna link saat dihover */
+.nav-link:hover {
+    color: #00bcd4; 
+}
+
+/* Warna dan gaya untuk link yang aktif */
+.nav-link.active {
+    font-weight: bold; 
+    color: #00bcd4 !important; /* Warna biru untuk link yang aktif */
+    border-bottom: 2px solid #00bcd4; /* Menambahkan garis bawah untuk link yang aktif */
+}
+
+/* Untuk tampilan dropdown saat aktif */
+.dropdown-menu .dropdown-item.active {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+
+/* Tombol dengan gaya primer */
+.btn-primary {
+    background-color: #00bcd4; 
+    border-color: #00bcd4; 
+    padding: 12px 30px; 
+    font-size: 1.5rem; 
+    border-radius: 5px; 
+}
+
+/* Ini CSS Untuk Dropdown menu */
+.dropdown-menu {
+    background-color: white; 
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    font-size: 1rem; 
+    color: #000; 
+    transition: color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    color: #00bcd4; 
+}
+
+
+/* CSS Untuk Carousel */
+.carousel-caption {
+    position: absolute;
+    bottom: 20%; 
+    left: 5%; 
+    color: #ffffff;
+}
+
+.carousel-caption h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #00bcd4; 
+}
+
+.carousel-caption h2 {
+    font-size: 3.5rem; 
+    font-weight: bold; 
+}
+
+.carousel-caption p {
+    font-size: 1rem; 
+    max-width: 600px;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute; 
+    top: 50%; 
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: 1px solid white;
+    border-radius: 50%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    width: 4%; 
+    height: 50px;
+    border: 2px solid white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+    border-radius: 0; 
+}
+
+.carousel-control-prev {
+    top: auto;
+    bottom: 400px; 
+    right: 7%; 
+    left: auto; 
+}
+
+.carousel-control-next {
+    top: auto;
+    bottom: 330px; 
+    right: 7%;
+}
+
+/* Menambahkan efek hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #00bcd4;  
+}
+
+.carousel-control-prev {
+    margin-bottom: 10px; 
+}
+
+/* Responsivitas untuk tampilan handphone */
+@media (max-width: 576px) {
+    .carousel-caption {
+        top: 70%;  /* Posisi teks lebih rendah di layar kecil */
+        left: 5%;  /* Jarak kiri diperbaiki */
+        transform: translateY(-50%);
+        text-align: left;
+    }
+    .carousel-caption h2 {
+        font-size: 24px;  /* Ukuran teks lebih kecil */
+    }
+    .carousel-caption p {
+        font-size: 14px;  /* Paragraf lebih kecil */
+    }
+    .carousel-caption .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Ini CSS Card */
+.card-title {
+    color: #00bcd4;
+}
+
+.card-body{
+    float: left;
+}
+
+/* Ini CSS feature */
+.feature-box {
+    background-color: #d4d4d4; /* Background color */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.feature-box:hover {
+    background-color: #00bcd4;
+    color: #ffffff;
+}
+
+.feature-box h4 {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.feature-box p {
+    color: #2b2b2b;
+}
+
+.feature-box i {
+    font-size: 50px;
+    color: #17a2b8;
+}
+
+
+/* Ini CSS untuk About Me */
+.img-fluid {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.category {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden; 
+    transition: transform 0.5s ease;
+}
+
+.category:hover {
+    transform: scale(1.05); 
+}
+
+.category-text {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover .category-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+
+
+/* Ini CSS Popular Courses */
+  
+
+
+
+
+/* Ini CSS Footer */
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: 0.3s;
+  }
+  
+  .footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  
+  .footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+  }
+  
+  .footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, 0.1);
+  }
+  
+  .footer .copyright a {
+    color: var(--light);
+  }
+  
+  .footer .footer-menu a {
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+
+
+/* Ini CSS 404 page */  
+  .hero-section1 {
+    position: relative;
+    background-image: url("images/carousel1.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }

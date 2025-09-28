@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPlore</title>
+
+    <!-- Menghubungkan ke Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- CSS lokal -->
+    <link href="Project UTS.css" rel="stylesheet" type="text/css">
+
+    <!-- Ini untuk mengimpor icon dari font awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .card-custom {
+          max-width: 540px;
+          margin: 0 auto;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .img-card {
+          height: 100%;
+          object-fit: cover;
+      }
+      .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      .text-muted {
+          display: flex;
+          align-items: center;
+      }
+      .icon {
+          margin-right: 5px;
+      }
+
+      .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #0d6efd; /* Customize this color if needed */
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #f77f00; /* Orange line color */
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+        .section-description {
+            text-align: center;
+            color: #000000; /* Muted text color */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <!-- Logo di sebelah kiri -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="images/icon.png" alt="Logo" class="me-2" width="30" height="30">
+              XPlore
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="Project UTS.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="About.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Courses.html">Courses</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Pages
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="Our Team.html">Our Team</a></li>
+                          <li><a class="dropdown-item" href="Testimonial.html">Testimonial</a></li>
+                          <li><a class="dropdown-item" href="404 page.html">404 Page</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Contact.html">Contact</a>
+                  </li>
+              </ul>
+              <div class="d-flex">
+                  <a href="#" class="btn btn-primary btn-lg">Join Now ➔</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <!-- End Navbar -->
+
+    <!-- Start Carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <!-- Carousel Item 1 -->
+          <div class="carousel-item active">
+              <img src="images/carousel1.jpg" class="d-block w-100" alt="pic1">
+              <div class="carousel-caption text-start">
+                  <h5>BEST OPEN TRIP</h5>
+                  <h2>The Best Trip and</h2>
+                  <h2>Explore Platform</h2>
+                  <p>
+                      Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
+                      Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.
+                  </p>
+                  <a href="#" class="btn btn-info px-5 py-3 text-white me-3">Read More</a>
+                  <a href="#" class="btn btn-outline-light px-5 py-3">Join Now</a>
+              </div>
+          </div>
+          <!-- Carousel Item 2 -->
+          <div class="carousel-item">
+              <img src="images/carousel2.jpg" class="d-block w-100" alt="pic2">
+              <div class="carousel-caption text-start">
+                  <h5>BEST OPEN TRIP</h5>
+                  <h2>The Best Trip and</h2>
+                  <h2>Explore Platform</h2>
+                  <p>
+                      Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
+                      Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.
+                  </p>
+                  <a href="#" class="btn btn-info px-5 py-3 text-white me-3">Read More</a>
+                  <a href="#" class="btn btn-outline-light px-5 py-3">Join Now</a> 
+              </div>
+          </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End Carousel -->
+
+    <!-- Start Card -->
+    <div class="container my-5">
+      <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-6 mb-4">
+              <div class="card card-custom">
+                  <div class="row g-0">
+                      <div class="col-md-4">
+                          <img src="images/Categorycourses-climbing.jpg" class="img-fluid img-card" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                          <div class="card-body">
+                              <h5 class="card-title">Education for Tomorrow's Leaders</h5>
+                              <p class="card-text text-muted">
+                                <span class="icon">📅</span> June 22, 2020 <span class="icon">👤</span>Colorlib
+                              </p>
+                              <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-6 mb-4">
+              <div class="card card-custom">
+                  <div class="row g-0">
+                      <div class="col-md-4">
+                          <img src="images/Categorycourses-climbing.jpg" class="img-fluid img-card" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                          <div class="card-body">
+                              <h5 class="card-title">Enroll Your Kids This Summer to get 30% off</h5>
+                              <p class="card-text text-muted">
+                                <span class="icon">📅</span> June 22, 2020 <span class="icon"> 👤</span>Colorlib
+                              </p>
+                              <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- End Card-->
+
+    <!-- Start Features -->
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-box">
+                    <i class="bi bi-mortarboard"></i>
+                    <img src="images/features_climbing.png" width="30%">
+                    <h4>Rock Climbing</h4>
+                    <p>
+                        Rock climbing adalah olahraga yang melibatkan mendaki 
+                        tebing dengan menggunakan teknik dan peralatan khusus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-box ">
+                    <i class="bi bi-globe2"></i>
+                    <img src="images/features_rafting.png" width="30%">
+                    <h4>Rafting</h4>
+                    <p>
+                        Rafting adalah olahraga petualangan yang melibatkan mengarungi sungai dengan perahu karet. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-box">
+                    <i class="bi bi-house-door"></i>
+                    <img src="images/features_cave.png" width="30%">
+                    <h4>Caving</h4>
+                    <p>
+                        Caving adalah olahraga atau aktivitas menjelajahi gua, 
+                        yang juga dikenal sebagai speleologi.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-box">
+                    <i class="bi bi-book"></i>
+                    <img src="images/features_trekking.png" width="30%">
+                    <h4>Mountaineering</h4>
+                    <p>
+                        Mountaineering adalah aktivitas mendaki gunung yang 
+                        melibatkan teknik dan keterampilan tertentu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End Features  -->
+
+    <!-- Start About Me -->
+    <div class="my-5">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <!-- Kolom Gambar -->
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                    <img class="img-fluid h-100 w-100" src="images/Aboutme.JPG" alt="About Me"/>
+                </div>
+                <!-- Kolom Keterangan -->
+                <div class="col-lg-6 col-md-6 d-flex align-items-center">
+                    <div>
+                        <p class="text-uppercase text-info fw-bold">About Me</p>
+                        <p class="display-6 fw-bold h1 mb-4">Welcome To My World</p>
+                        <p class="mb-4">
+                            Hallo semuanya, perkenalkan nama saya Matius Wahyu Abadi kuliah di Fakultas Teknologi
+                            Universitas Tarumanagara dengan Nim 825230133 jurusan yang saya ambil Sistem Informasi
+                            Kelas C.
+                        </p>
+                        <p class="mb-4">
+                            Saya masuk kuliah tahun 2023 artinya saya angkatan 23 dan Mata Kuliah yang saya ambil sebagai berikut:
+                        </p>
+    
+                        <!-- Mulai Grid dengan Batasan 12 -->
+                        <div class="row gy-2 gx-4 mb-4">
+                            <!-- Kolom 1 (6/12) -->
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <img src="images/arrow-right-solid.svg" width="7%" class="me-2" alt="arrow" />Analysis and Design of Information System
+                                </p>
+                            </div>
+                            <!-- Kolom 2 (6/12) -->
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <img src="images/arrow-right-solid.svg" width="7%" class="me-2" alt="arrow" />Object Based Programming
+                                </p>
+                            </div>
+                            <!-- Kolom 3 (6/12) -->
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <img src="images/arrow-right-solid.svg" width="7%" class="me-2" alt="arrow" />Oracle Database Administrator
+                                </p>
+                            </div>
+                            <!-- Kolom 4 (6/12) -->
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <img src="images/arrow-right-solid.svg" width="7%" class="me-2" alt="arrow" />Web Development
+                                </p>
+                            </div>
+                        </div>
+                        <a class="btn btn-info py-3 px-5 mt-2 text-white" href="About.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Me -->
+    
+    
+    <!-- Start Courses Categories -->
+    <div class="container mt-5">
+      <div class="row">
+          <div class="row">
+              <div class="col-12">
+                <p class="text-center text-info h4">Categories</p>
+                <p class="text-center mb-5 h1 fw-bold">Courses Categories</p>
+              </div>
+          </div>
+          <!-- Kolom kiri -->
+          <div class="col-md-8">
+              <div class="row">
+                  <!-- Gambar pertama lebih lebar -->
+                  <div class="col-12 mb-3">
+                      <div class="category" style="background-image: url('images/Categorycourses-mountain.jpg'); height: 250px; background-size: cover; background-position: center;">
+                          <div class="category-text text-white">
+                              <h5>Mountaineering</h5>
+                              <p>49 Trip</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Dua gambar di bawah yang lebih kecil -->
+                  <div class="col-6 mb-3">
+                      <div class="category" style="background-image: url('images/Categorycourses-caving.jpg'); height: 158px; background-size: cover; background-position: center;">
+                          <div class="category-text text-white">
+                              <h5>Caving</h5>
+                              <p>15 Trip</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6 mb-3">
+                      <div class="category" style="background-image: url('images/Categorycourses-rafting.jpg'); height: 158px; background-size: cover; background-position: center;">
+                          <div class="category-text text-white">
+                              <h5>Rafting</h5>
+                              <p>35 Trip</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Kolom kanan -->
+          <div class="col-md-4">
+              <div class="category" style="background-image: url('images/Categorycourses-climbing.jpg'); height: 435px; background-size: cover; background-position: center;">
+                  <div class="category-text text-white">
+                      <h5>Climbing Festival</h5>
+                      <p>3 Championship Climb</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>    
+    <!--  End Courses Categories -->
+
+
+    <!-- Start Pricing -->
+    <div class="container my-5">
+      <div class="section-title">
+          <h2>Pricing</h2>
+      </div>
+      <div class="section-description">
+          <p>Far far away, behind the word mountains, far from the countries 
+             Vokalia and Consonantia, there live the blind texts.
+          </p>
+      </div>
+    </div>
+    <!-- End Pricing -->
+
+
+    <!-- Start Popular Activity -->
+    <div class="container py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center text-info h4">Activity</p>
+              <p class="text-center mb-5 h1 fw-bold">Popular Activity</p>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Course Card 1 -->
+            <div class="col-lg-4 col-sm-6">
+              <div class="card border-0" style="background-color: #f0fbfc">
+                <div class="position-relative overflow-hidden">
+                  <img class="img-fluid" src="images/Popular_hiking.jpeg" alt="Course Image 1" />
+                  <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a href="#" class="btn btn-sm btn-info px-3 text-white" style="border-radius: 10px 0 0 10px;">Read More</a>
+                    <a href="#" class="btn btn-sm btn-info px-3 text-white" style="border-radius: 0 10px 10px 0;">Join Now</a>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold h3">$120.00</h5>
+                  <div class="mb-3">
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    (255)
+                  </div>
+                  <p class="h5 fw-bold p-2">Fun Hiking and Camping for Beginners</p>
+                  <div class="d-flex border-top justify-content-between">
+                    <span class="py-2"><i class="fa fa-user-tie text-info me-2"></i>Raja Muka</span>
+                    <span class="py-2"><i class="fa fa-clock text-info me-2"></i>3D2N</span>
+                    <span class="py-2"><i class="fa fa-user text-info me-2"></i>60 Person</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Course Card 2 -->
+            <div class="col-lg-4 col-sm-6">
+              <div class="card border-0" style="background-color: #f0fbfc">
+                <div class="position-relative overflow-hidden">
+                  <img class="img-fluid" src="images/Popular_camping.jpeg" alt="Course Image 2" />
+                  <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a href="#" class="btn btn-sm btn-info px-3 text-white" style="border-radius: 10px 0 0 10px;">Read More</a>
+                    <a href="#" class="btn btn-sm btn-info px-3 text-white" style="border-radius: 0 10px 10px 0;">Join Now</a>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold h3">$149.00</h5>
+                  <div class="mb-3">
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    (335)
+                  </div>
+                  <p class="h5 fw-bold p-2">Fun Camping and Chill Together</p>
+                  <div class="d-flex border-top justify-content-between">
+                    <span class="py-2"><i class="fa fa-user-tie text-info me-2"></i>Isro Indra</span>
+                    <span class="py-2"><i class="fa fa-clock text-info me-2"></i>2D1N</span>
+                    <span class="py-2"><i class="fa fa-user text-info me-2"></i>30 Person</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Course Card 3 -->
+            <div class="col-lg-4 col-sm-6">
+              <div class="card border-0" style="background-color: #f0fbfc">
+                <div class="position-relative overflow-hidden">
+                  <img class="img-fluid" src="images/Popular_SRT.jpeg" alt="Course Image 3" />
+                  <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                    <a href="#" class="btn btn-sm btn-info px-3 text-white" style="border-radius: 10px 0 0 10px;">Read More</a>
+                    <a href="#" class="btn btn-sm btn-info px-3 text-white" style="border-radius: 0 10px 10px 0;">Join Now</a>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold h3">$150.00</h5>
+                  <div class="mb-3">
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    <img src="images/star-solid.svg" width="5%" alt="star" />
+                    (236)
+                  </div>
+                  <p class="h5 fw-bold p-2">Single Rope Technique for Beginners</p>
+                  <div class="d-flex border-top justify-content-between">
+                    <span class="py-2"><i class="fa fa-user-tie text-info me-2"></i>Alif Akbar</span>
+                    <span class="py-2"><i class="fa fa-clock text-info me-2"></i>1.49 Hrs</span>
+                    <span class="py-2"><i class="fa fa-user text-info me-2"></i>30 Person</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    <!--  End Popular Activity  -->
+</body>
+
+<footer>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- Footer Atas -->
+        <div class="container py-5">
+          <div class="row g-5">
+            <!-- Kolom Quick Link -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="text-white mb-3">Quick Link</h4>
+              <a class="btn btn-link" href="About.html">About Us</a>
+              <a class="btn btn-link" href="">Contact Us</a>
+              <a class="btn btn-link" href="">Privacy Policy</a>
+              <a class="btn btn-link" href="">Terms & Condition</a>
+              <a class="btn btn-link" href="">FAQs & Help</a>
+            </div>
+            <!-- Kolom Contact -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="text-white mb-3">Contact</h4>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>info@example.com
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <!-- Kolom Gallery -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="text-white mb-3">Gallery</h4>
+              <div class="row g-2 pt-2">
+                <div class="col-4">
+                  <img class="img-fluid bg-light p-1" src="images/footer_climbing.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid bg-light p-1" src="images/footer_diving.jpeg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid bg-light p-1" src="images/footer_hiking.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid bg-light p-1" src="images/footer_paralayang.jpg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid bg-light p-1" src="images/footer_rafting.jpeg" alt="" />
+                </div>
+                <div class="col-4">
+                  <img class="img-fluid bg-light p-1" src="images/footer_sc.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Kolom Newsletter -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="text-white mb-3">Newsletter</h4>
+              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+                <button type="button" class="btn btn-info px-3 py-2 position-absolute top-0 end-0 mt-2 me-2 text-white">
+                  SignUp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Footer Bawah -->
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <!-- Kolom Kiri -->
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. Designed By
+                <a class="border-bottom" href="#">HTML Codex</a><br /><br />
+                Distributed By <a class="border-bottom" href="#">ThemeWagon</a>
+              </div>
+              <!-- Kolom Kanan -->
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="Project UTS.html">Home</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</footer>
+    <!-- JavaScript - Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</html>
